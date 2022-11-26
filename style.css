@@ -1,0 +1,174 @@
+:root {
+    --dark: #333537;
+    --darker: #202122;
+    --light: #d5d5d8;
+    --coral: #f08080;
+    --green: #20b2aa;
+    --blue: #87cefa;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    transition: 0.2s ease-out;
+}
+
+*::selection {
+    background-color: var(--light);
+    color: var(--darker);
+}
+
+body {
+    margin: 0;
+    background-color: var(--darker);
+    color: var(--light);
+}
+
+.container {
+    background-color: var(--dark);
+    width: 80%;
+    margin: 16px auto;
+    padding: 32px;
+    border-radius: 15px;
+}
+
+pre {
+    font-size: 16px;
+    font-family: 'Montserrat', monospace;
+    margin-top: 16px;
+    padding: 16px 32px;
+    background-color: var(--light);
+    color: var(--darker);
+    border-radius: 8px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+code::selection {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+code em,
+code i,
+code strong {
+    text-shadow: 1px 1px 1px var(--darker);
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+    padding: 2px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--blue);
+}
+
+h2 a,
+.nav a {
+    border: none;
+}
+
+.nav a {
+    font-size: 24px;
+    padding: 8px;
+}
+
+a:hover {
+    background-color: var(--blue);
+    color: var(--darker);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: left;
+}
+
+td,
+th {
+    padding: 8px;
+    border: 1px solid var(--green);
+}
+
+th {
+    background-color: var(--green);
+    color: var(--dark);
+}
+
+/* Стили для выделения важных частей текста */
+
+/* HTML-элементы */
+strong {
+    color: var(--coral);
+    font-style: italic;
+}
+
+strong::selection {
+    color: var(--darker);
+    background-color: var(--coral);
+}
+
+/* HTML-атрибуты */
+em {
+    color: var(--green);
+    font-weight: bold;
+}
+
+em::selection {
+    color: var(--darker);
+    background-color: var(--green);
+}
+
+/* Ссылки */
+i {
+    color: var(--blue);
+    font-weight: bold;
+}
+
+a::selection,
+i::selection {
+    color: var(--darker);
+    background-color: var(--blue);
+}
+
+/* Стили для наглядной демонстрации примеров */
+
+figure {
+    border: 4px dashed var(--blue);
+    border-radius: 15px;
+    padding: 5px;
+}
+
+h4 {
+    color: lightgreen;
+}
+
+h5 {
+    color: lightcoral;
+}
+
+.green-bg {
+    background-color: lightgreen;
+    color: black;
+}
+
+button,
+input {
+    background-color: var(--light);
+    color: var(--darker);
+    border: none;
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    outline: 3px solid rgba(0, 0, 0, 0);
+}
+
+input:focus,
+button:focus {
+    outline: 3px solid var(--green);
+}
