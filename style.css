@@ -1,5 +1,5 @@
 :root {
-    --dark: #333537;
+    --dark: #2d2e31;
     --darker: #202122;
     --light: #d5d5d8;
     --coral: #f08080;
@@ -23,12 +23,21 @@ body {
     color: var(--light);
 }
 
+div.container:first-of-type {
+    margin-top: 16px;
+}
+
 .container {
     background-color: var(--dark);
     width: 80%;
-    margin: 16px auto;
+    margin: 0 auto 16px;
     padding: 32px;
     border-radius: 15px;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
 }
 
 pre {
@@ -54,6 +63,26 @@ code strong {
     text-shadow: 1px 1px 1px var(--darker);
 }
 
+.content {
+    margin-left: 20%;
+}
+
+/* Навигация */
+
+.nav {
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    background-color: var(--dark);
+    overflow: auto;
+    padding-left: 16px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+}
+
 a {
     text-decoration: none;
     color: var(--blue);
@@ -62,30 +91,37 @@ a {
     border-bottom: 1px solid var(--blue);
 }
 
+.nav a {
+    color: rgba(213, 213, 216, 70%);
+}
+
+.nav a:hover {
+    color: rgba(213, 213, 216, 1);
+}
+
 h2 a,
 .nav a {
     border: none;
 }
 
 .nav a {
-    font-size: 24px;
+    font-size: 16px;
     padding: 8px;
 }
 
-a:hover {
+.content a:hover {
     background-color: var(--blue);
     color: var(--darker);
-}
-
-.nav {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
 }
 
 table {
     border-collapse: collapse;
     text-align: left;
+    max-width: 100%;
+}
+
+.table-container {
+    overflow: auto;
 }
 
 td,
@@ -97,6 +133,26 @@ th {
 th {
     background-color: var(--green);
     color: var(--dark);
+}
+
+/* Навигация */
+
+.header {
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+}
+
+.progress-container {
+    height: 100%;
+    width: 8px;
+    background: var(--light);
+}
+
+.progress-bar {
+    width: 8px;
+    background: var(--green);
+    height: 0;
 }
 
 /* Стили для выделения важных частей текста */
