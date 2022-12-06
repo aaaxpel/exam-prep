@@ -228,3 +228,14 @@ input:focus,
 button:focus {
     outline: 3px solid var(--green);
 }
+
+@media only screen and (max-width: 900px) {
+    .content {
+        margin-left: 0;
+    }
+
+    .header,
+    .nav {
+        display: none;
+    }
+}
